@@ -1,0 +1,109 @@
+/*top*/
+.container-top {
+
+    width: 100%;
+    background-image: url("/images/bg-images/laferrari.png");
+    background-size: cover;
+    height: 650px;
+    text-align: center;
+
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay img {
+    width: 50px;
+    position: absolute;
+    transform: translate(0, 230px);
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-duration: 2.5s;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0, 230px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 300px);
+        opacity: 0;
+    }
+}
+
+.overlay p {
+    color: #FFF;
+    text-align: center;
+    width: 40%;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+
+}
+
+/*container middle*/
+.container-middle {
+    color: black;
+    height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-middle p {
+    text-align: center;
+    width: 70%;
+    font-size: 2rem;
+}
+
+.download {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download p {
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.download img {
+    width: 40%;
+    height: 60%;
+}
+
+@media screen and (max-width: 425px) {
+    .overlay p {
+        color: #FFF;
+        text-align: center;
+        width: 80%;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+
+    }
+
+    .container-middle p {
+        text-align: center;
+        width: 70%;
+        font-size: 1.4rem;
+    }
+
+    .container-middle img:last-child {
+        width: 70%;
+    }
+}

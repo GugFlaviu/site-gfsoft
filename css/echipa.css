@@ -1,0 +1,127 @@
+/*top*/
+.container-top {
+
+    width: 100%;
+    background-image: url("/images/bg-images/echipaimg.png");
+    background-size: cover;
+    height: 650px;
+    text-align: center;
+
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay img {
+    width: 50px;
+    position: absolute;
+    transform: translate(0, 230px);
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-duration: 2.5s;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0, 230px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 300px);
+        opacity: 0;
+    }
+}
+
+.overlay p {
+    color: #FFF;
+    text-align: center;
+    width: 40%;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+
+}
+
+/*top end*/
+/*middle*/
+.container-middle {
+    width: 100%;
+    height: 160vh;
+    color: #000;
+}
+
+.table {
+    margin-top: 5%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 314px 314px 314px;
+    grid-template-rows: 341px 341px 341px;
+    justify-content: center;
+}
+
+.card {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.card img {
+    width: 170px;
+    margin: auto;
+    border-radius: 999px;
+}
+
+.card p {
+    margin: 10px 0 0 0;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container-middle {
+        width: 100%;
+        height: 200%;
+        color: #000;
+    }
+
+    .empty {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .table {
+
+        grid-template-columns: 314px;
+
+
+    }
+
+    .container-middle ul>li {
+        height: 314px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .overlay p {
+        color: #FFF;
+        text-align: center;
+        width: 80%;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+
+    }
+}

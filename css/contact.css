@@ -1,0 +1,153 @@
+/*top*/
+.container-top {
+
+    width: 100%;
+    background-image: url("/images/contact/img.png");
+    background-size: cover;
+    height: 650px;
+    text-align: center;
+
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay img {
+    width: 50px;
+    position: absolute;
+    transform: translate(0, 230px);
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    animation-duration: 2.5s;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0, 230px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 300px);
+        opacity: 0;
+    }
+}
+
+.overlay p {
+    color: #FFF;
+    text-align: center;
+    width: 40%;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+
+}
+
+/*top end*/
+form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    color: black;
+    margin-top: 3%;
+    gap: 20px;
+}
+
+form input {
+    width: 35%;
+    height: 10%;
+    border: none;
+    border-bottom: 10px solid black;
+
+}
+
+form input:focus {
+    outline: none;
+
+
+}
+
+form input::placeholder {
+    color: #414141;
+}
+
+form input::placeholder,
+form input:active,
+form input[type="text"] {
+    color: black;
+    font-size: 4rem;
+
+}
+
+.btn {
+    margin-top: 5%;
+    border: 5px solid #000;
+    width: 25%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #000;
+
+}
+
+@media screen and (max-width: 768px) {
+    form input {
+        width: 55%;
+
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .overlay p {
+        color: #FFF;
+        text-align: center;
+        width: 80%;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+
+    }
+
+    form {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+
+        width: 55%;
+
+    }
+
+    form input {
+        width: 85%;
+        height: 10%;
+        border: none;
+        border-bottom: 10px solid black;
+
+    }
+}
